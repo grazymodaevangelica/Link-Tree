@@ -1,0 +1,156 @@
+@import "variaveis.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(202, 202, 202, 0.767);
+  background-image: url(./img/elegant_hand_painted_alcohol_ink_background_with_gold_glitter_0609.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $poppins;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 60vh;
+
+  img {
+    width: 200px;
+    border-radius: 50%;
+    border: 4px solid goldenrod;
+  }
+
+  .text-box {
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+
+    h2 {
+      color: goldenrod;
+      font-family: $cursiva;
+      font-size: 40px;
+    }
+    p {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  .links-tree-section {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+
+      li {
+        max-width: 300px;
+        width: 100%;
+        list-style-type: none;
+
+        a {
+          width: 100%;
+          padding: 15px 20px;
+          background: goldenrod;
+          border: 1px solid #000;
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 20px;
+          font-size: 24px;
+          color: #fff;
+          cursor: pointer;
+          transition: 0.4s all ease;
+          text-decoration: none;
+          border-radius: 40px;
+
+          span {
+            color: #000;
+            font-size: 18px;
+          }
+
+          &:hover {
+               gap: 50px;
+               background: rgba(218, 165, 32, 0.726);
+             }
+        }
+
+        
+      }
+    }
+  }
+}
+
+/* Estilos para o modal */
+.modal-background {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+
+  .modal-content {
+    background-color: #fff;
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: goldenrod;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgba(218, 162, 20, 0.651);
+    }
+  }
+}
